@@ -27,8 +27,10 @@ def upgrade() -> None:
     sa.Column('memberAge', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('memberId')
     )
-    op.execute("UPDATE members Set memberAge = memberAge + 1")    
+    post_upgrade()
     # ### end Alembic commands ###
+def post_upgrade():
+    op.execute("UPDATE members Set memberAge = memberAge + 1")
 
 
 def downgrade() -> None:
