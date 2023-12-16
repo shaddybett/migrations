@@ -34,7 +34,7 @@ def add_member(memberName,memberAge,memberEmail,):
         session.add(new_member)
         session.commit()    
 
-memberName = 'Am'
-memberEmail='am@gmail.com'
+memberName = 'Ann'
+memberEmail='ann@gmail.com'
 memberAge = 16
 add_member(memberName,memberAge,memberEmail)
