@@ -19,7 +19,7 @@ class Member(Base):
         self.memberEmail = memberEmail
         self.memberAge = memberAge
 
-db = 'sqlite:///newDB.db'
+db = 'sqlite:///splash.db'
 engine = create_engine(db)
 Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
